@@ -144,12 +144,28 @@
       <label for="dateAdmission">Date of Admission</label>
       <input type="date" name="dateAdmission">
 
-      <label for="modePayment">Mode of Payment</label>
-      <input type="text" name="modePayment">
+     <!-- Mode of Payment Dropdown -->
+  <label for="payment_mode">Mode of Payment:</label>
+  <select id="payment_mode" name="Mode of Payment" required>
+    <option value="Annual">Annual</option>
+    <option value="Semestral">Semestral</option>
+    <option value="Installment">Installment</option>
+    <option value="ESC(Annual)">ESC(Annual)</option>
+    <option value="ESC(Semestral)">ESC(Semestral)</option>
+    <option value="ESC(Installment)">ESC(Installment)</option>
+    <option value="3rd Child(Installment)">3rd Child(Installment)</option>
+    <option value="3rd Child ESC(Installment)">3rd Child ESC(Installment)</option>
+  </select><br><br>
 
-      <label for="paymentMethod">Payment Method</label>
-      <input type="text" name="paymentMethod">
-
+      <!-- Payment Method Dropdown -->
+  <label for="payment_method">Payment Method:</label>
+  <select id="payment_method" name="Payment Method" required>
+    <option value="Cash">Cash</option>
+    <option value="Bank Transfer">Bank Transfer</option>
+    <option value="GCASH">GCASH</option>
+    <option value="PAYMAYA">PAYMAYA</option>
+  </select><br><br>
+      
       <label for="paymentAmount">Payment Amount</label>
       <input type="number" name="paymentAmount" step="0.01">
 
