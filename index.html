@@ -40,11 +40,23 @@
       font-size: 16px;
     }
 
-.checkbox-group {
-  display: grid;
-  /* ...any other styling */
-}
-    
+    .checkbox-group {
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+
+    .checkbox-group label {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+      font-weight: normal;
+    }
+
+    .checkbox-group input[type="checkbox"] {
+      margin-right: 10px;
+      transform: scale(1.2);
+    }
+
     button {
       margin-top: 20px;
       width: 100%;
@@ -79,61 +91,58 @@
       <label for="studentName">Student Name</label>
       <input type="text" name="studentName" required>
 
-     <!-- Grade Level Dropdown -->
-    <label for="grade_level">Grade Level:</label>
-    <select id="grade_level" name="Grade Level" required>
-      <option value="Nursery">Nursery</option>
-      <option value="Pre-Kinder">Pre-Kinder</option>
-      <option value="Kinder">Kinder</option>
-      <option value="Grade 1">Grade 1</option>
-      <option value="Grade 2">Grade 2</option>
-      <option value="Grade 3">Grade 3</option>
-      <option value="Grade 4">Grade 4</option>
-      <option value="Grade 5">Grade 5</option>
-      <option value="Grade 6">Grade 6</option>
-      <option value="Grade 7">Grade 7</option>
-      <option value="Grade 8">Grade 8</option>
-      <option value="Grade 9">Grade 9</option>
-      <option value="Grade 10">Grade 10</option>
-      <option value="Grade 11">Grade 11</option>
-      <option value="Grade 12">Grade 12</option>
-    </select><br><br>
-    
-    <!-- Section Dropdown -->
-    <label for="section">Section:</label>
-    <select id="section" name="Section" required>
-      <option value="Eden">Eden</option>
-      <option value="Nazareth">Nazareth</option>
-      <option value="Ephesus">Ephesus</option>
-      <option value="Galilee">Galilee</option>
-      <option value="Bethany">Bethany</option>
-      <option value="Gethsemane">Gethsemane</option>
-      <option value="Capernaum">Capernaum</option>
-      <option value="Judea">Judea</option>
-      <option value="Cyrene">Cyrene</option>
-      <option value="Issachar">Issachar</option>
-      <option value="Israel">Israel</option>
-      <option value="Love">Love</option>
-      <option value="Kindness">Kindness</option>
-      <option value="Faith">Faith</option>
-      <option value="Excellence">Excellence</option>
-      <option value="ABM(Peace)">ABM(Peace)</option>
-      <option value="STEM(Peace)">STEM(Peace)</option>
-      <option value="HUMSS(Peace)">HUMSS(Peace)</option>
-      <option value="GAS(Peace)">GAS(Peace)</option>
-      <option value="ICT(Peace)">ICT(Peace)</option>
-      <option value="ABM(Compassion)">ABM(Compassion)</option>
-      <option value="STEM(Compassion)">STEM(Compassion</option>
-      <option value="ICT(Compassion)">ICT(Compassion</option>
-    </select><br><br>
+      <label for="grade_level">Grade Level:</label>
+      <select id="grade_level" name="Grade Level" required>
+        <option value="Nursery">Nursery</option>
+        <option value="Pre-Kinder">Pre-Kinder</option>
+        <option value="Kinder">Kinder</option>
+        <option value="Grade 1">Grade 1</option>
+        <option value="Grade 2">Grade 2</option>
+        <option value="Grade 3">Grade 3</option>
+        <option value="Grade 4">Grade 4</option>
+        <option value="Grade 5">Grade 5</option>
+        <option value="Grade 6">Grade 6</option>
+        <option value="Grade 7">Grade 7</option>
+        <option value="Grade 8">Grade 8</option>
+        <option value="Grade 9">Grade 9</option>
+        <option value="Grade 10">Grade 10</option>
+        <option value="Grade 11">Grade 11</option>
+        <option value="Grade 12">Grade 12</option>
+      </select>
 
-    <!-- Gender Dropdown -->
-    <label for="gender">Gender:</label>
-    <select id="gender" name="Gender" required>
-      <option value="Male">Male</option>
-      <option value="Female">Female</option>
-    </select><br><br>
-      
+      <label for="section">Section:</label>
+      <select id="section" name="Section" required>
+        <option value="Eden">Eden</option>
+        <option value="Nazareth">Nazareth</option>
+        <option value="Ephesus">Ephesus</option>
+        <option value="Galilee">Galilee</option>
+        <option value="Bethany">Bethany</option>
+        <option value="Gethsemane">Gethsemane</option>
+        <option value="Capernaum">Capernaum</option>
+        <option value="Judea">Judea</option>
+        <option value="Cyrene">Cyrene</option>
+        <option value="Issachar">Issachar</option>
+        <option value="Israel">Israel</option>
+        <option value="Love">Love</option>
+        <option value="Kindness">Kindness</option>
+        <option value="Faith">Faith</option>
+        <option value="Excellence">Excellence</option>
+        <option value="ABM(Peace)">ABM(Peace)</option>
+        <option value="STEM(Peace)">STEM(Peace)</option>
+        <option value="HUMSS(Peace)">HUMSS(Peace)</option>
+        <option value="GAS(Peace)">GAS(Peace)</option>
+        <option value="ICT(Peace)">ICT(Peace)</option>
+        <option value="ABM(Compassion)">ABM(Compassion)</option>
+        <option value="STEM(Compassion)">STEM(Compassion)</option>
+        <option value="ICT(Compassion)">ICT(Compassion)</option>
+      </select>
+
+      <label for="gender">Gender:</label>
+      <select id="gender" name="Gender" required>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+      </select>
+
       <label for="dob">Date of Birth</label>
       <input type="date" name="dob">
 
@@ -149,21 +158,20 @@
       <label for="dateAdmission">Date of Admission</label>
       <input type="date" name="dateAdmission">
 
-      <!-- Enrollment Documents Requirement -->
-      <label for="requirements">Required Documents for Enrollment:</label><br>
-    <div class="checkbox-group">
-       <label><input type="checkbox" name="requirements" value="F1 - Enrollment Form"> F1 - Enrollment Form</label><br>
-       <label><input type="checkbox" name="requirements" value="Birth Certificate (PSA)"> Birth Certificate (PSA)</label><br>
-       <label><input type="checkbox" name="requirements" value="SF10 - Form137"> SF10 - Form137</label><br>
-       <label><input type="checkbox" name="requirements" value="Report Card - Form138"> Report Card - Form138</label><br>
-       <label><input type="checkbox" name="requirements" value="Certificate of Good Moral Character"> Certificate of Good Moral Character</label><br>
-       <label><input type="checkbox" name="requirements" value="Medical Certificate"> Medical Certificate</label><br>
-       <label><input type="checkbox" name="requirements" value="School Related Policies"> School Related Policies</label><br>
-       <label><input type="checkbox" name="requirements" value="ESC Application Form"> ESC Application Form</label><br>
-       <label><input type="checkbox" name="requirements" value="ITR/Certificate of Indigency"> ITR/Certificate of Indigency</label><br>
-       <label><input type="checkbox" name="requirements" value="Health Assessment"> Health Assessment</label><br>
-    </div>
-      
+      <label for="requirements">Required Documents for Enrollment (Check all that apply):</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="requirements" value="F1 - Enrollment Form"> F1 - Enrollment Form</label>
+        <label><input type="checkbox" name="requirements" value="Birth Certificate (PSA)"> Birth Certificate (PSA)</label>
+        <label><input type="checkbox" name="requirements" value="SF10 - Form137"> SF10 - Form137</label>
+        <label><input type="checkbox" name="requirements" value="Report Card - Form138"> Report Card - Form138</label>
+        <label><input type="checkbox" name="requirements" value="Certificate of Good Moral Character"> Certificate of Good Moral Character</label>
+        <label><input type="checkbox" name="requirements" value="Medical Certificate"> Medical Certificate</label>
+        <label><input type="checkbox" name="requirements" value="School Related Policies"> School Related Policies</label>
+        <label><input type="checkbox" name="requirements" value="ESC Application Form"> ESC Application Form</label>
+        <label><input type="checkbox" name="requirements" value="ITR/Certificate of Indigency"> ITR/Certificate of Indigency</label>
+        <label><input type="checkbox" name="requirements" value="Health Assessment"> Health Assessment</label>
+      </div>
+
       <label for="remarks">Remarks</label>
       <textarea name="remarks" rows="3"></textarea>
 
@@ -172,7 +180,7 @@
   </div>
 
   <script>
-    const scriptURL = "https://script.google.com/macros/s/AKfycbzVzc_gXKoqjNckQ5VLQSdtJpvZMjaey50YICmI1KdVFl0audMDhl9HCEP_01vgx6uM/exec"; // Replace with your actual deployed Web App URL
+    const scriptURL = "https://script.google.com/macros/s/AKfycbzFibjwsH2Y07zlNA3HRvkB4E7BdqGslQnpeodX4aX7scbsgGGykZP25DJVjy5jKeDe/exec";
 
     document.getElementById("studentForm").addEventListener("submit", function (e) {
       e.preventDefault();
@@ -180,7 +188,12 @@
       const formData = new FormData(e.target);
       const data = {};
       formData.forEach((value, key) => {
-        data[key] = value;
+        // for checkboxes (multiple values with same name)
+        if (data[key]) {
+          data[key] += ", " + value;
+        } else {
+          data[key] = value;
+        }
       });
 
       fetch(scriptURL, {
