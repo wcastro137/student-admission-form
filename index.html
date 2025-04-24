@@ -122,8 +122,8 @@
       <option value="ICT(Compassion)">ICT(Compassion</option>
     </select><br><br>
 
-      <!-- Gender Dropdown -->
-    <label for="grade_level">Grade Level:</label>
+    <!-- Gender Dropdown -->
+    <label for="gender">Gender:</label>
     <select id="gender" name="Gender" required>
       <option value="Male">Male</option>
       <option value="Female">Female</option>
@@ -144,46 +144,29 @@
       <label for="dateAdmission">Date of Admission</label>
       <input type="date" name="dateAdmission">
 
-     <!-- Mode of Payment Dropdown -->
-  <label for="payment_mode">Mode of Payment:</label>
-  <select id="payment_mode" name="Mode of Payment" required>
-    <option value="Annual">Annual</option>
-    <option value="Semestral">Semestral</option>
-    <option value="Installment">Installment</option>
-    <option value="ESC(Annual)">ESC(Annual)</option>
-    <option value="ESC(Semestral)">ESC(Semestral)</option>
-    <option value="ESC(Installment)">ESC(Installment)</option>
-    <option value="3rd Child(Installment)">3rd Child(Installment)</option>
-    <option value="3rd Child ESC(Installment)">3rd Child ESC(Installment)</option>
-  </select><br><br>
-
-      <!-- Payment Method Dropdown -->
-  <label for="payment_method">Payment Method:</label>
-  <select id="payment_method" name="Payment Method" required>
-    <option value="Cash">Cash</option>
-    <option value="Bank Transfer">Bank Transfer</option>
-    <option value="GCASH">GCASH</option>
-    <option value="PAYMAYA">PAYMAYA</option>
-  </select><br><br>
+      <!-- Enrollment Documents Requirement -->
+      <label for="documents">Required Documents for Enrollment:</label><br>
+      <input type="checkbox" name="documents[]" value="F1 - Enrollment Form"> F1 - Enrollment Form<br>
+      <input type="checkbox" name="documents[]" value="Birth Certificate (PSA)"> Birth Certificate (PSA)<br>
+      <input type="checkbox" name="documents[]" value="SF10 - Form137"> SF10 - Form137<br>
+      <input type="checkbox" name="documents[]" value="Report Card - Form138"> Report Card - Form138<br>
+      <input type="checkbox" name="documents[]" value="Certificate of Good Moral Character"> Certificate of Good Moral Character<br>
+      <input type="checkbox" name="documents[]" value="Medical Certificate"> Medical Certificate<br>
+      <input type="checkbox" name="documents[]" value="School Related Policies"> School Related Policies<br>
+      <input type="checkbox" name="documents[]" value="ESC Application Form"> ESC Application Form<br>
+      <input type="checkbox" name="documents[]" value="ITR/Certificate of Indigency"> ITR/Certificate of Indigency<br>
+      <input type="checkbox" name="documents[]" value="Health Assessment"> Health Assessment<br>
+      <br>
       
-      <label for="paymentAmount">Payment Amount</label>
-      <input type="number" name="paymentAmount" step="0.01">
-
       <label for="remarks">Remarks</label>
       <textarea name="remarks" rows="3"></textarea>
-
-      <label for="operator">Operator</label>
-      <input type="text" name="operator">
-
-      <label for="date">Date</label>
-      <input type="date" name="date">
 
       <button type="submit">Submit</button>
     </form>
   </div>
 
   <script>
-    const scriptURL = "https://script.google.com/macros/s/AKfycbzFibjwsH2Y07zlNA3HRvkB4E7BdqGslQnpeodX4aX7scbsgGGykZP25DJVjy5jKeDe/exec"; // Replace this with your actual deployed Web App URL
+    const scriptURL = "https://script.google.com/macros/s/AKfycbzFibjwsH2Y07zlNA3HRvkB4E7BdqGslQnpeodX4aX7scbsgGGykZP25DJVjy5jKeDe/exec"; // Replace with your actual deployed Web App URL
 
     document.getElementById("studentForm").addEventListener("submit", function (e) {
       e.preventDefault();
